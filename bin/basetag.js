@@ -44,7 +44,7 @@ try {
     throw new Error(`- File already exists: ${baseLink}`);
   }
 
-  fs.symlinkSync(base, baseLink, 'junction');
+  fs.symlinkSync('..', baseLink, 'junction');
 
   log(`- Created $ symlink to ${base}\n`);
 } catch (error) {
